@@ -4,3 +4,5 @@
 
 .venv
 agents/__pycache__/base_agent.cpython-310.pyc
+agents/__pycache__/base_agent.cpython-311.pyc
+edux
