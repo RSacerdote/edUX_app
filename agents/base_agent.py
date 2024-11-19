@@ -47,7 +47,6 @@ def parse_messages(msgs):
     
     transformed =[{"content": base_message, 'role': 'system'}]
 
-    transformed = []
     for i, message in enumerate(msgs):
         if not isinstance(message, dict) or 'text' not in message or 'isUserMessage' not in message:
             raise ValueError("Each message must have 'text' and 'isUserMessage' keys")
