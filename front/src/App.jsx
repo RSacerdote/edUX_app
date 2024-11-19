@@ -6,7 +6,6 @@ import Tasks from "./pages/Tasks"
 import Task from "./pages/Task"
 import Chat from "./pages/Chat"
 
-
 export default function App() {
   return (
     <PagesContainer>
