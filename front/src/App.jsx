@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import styled from "styled-components"
 import Planner from "./pages/Planner"
 import Home from "./pages/Home"
+import Chat from "./pages/Chat"
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/planner" element={<Planner />} />
+            <Route path="/chat" element={<Chat />} />
           </Routes>
         </BrowserRouter>
       </PagesContainer>
