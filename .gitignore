@@ -1,3 +1,5 @@
 /agents/agents_venv
 
-/agents/req.txt
+.env
+
+.venv
