@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { useNavigate } from "react-router-dom"
-import React, { useState } from "react";
 import HomeIcon from '@mui/icons-material/Home';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import TurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
@@ -19,7 +18,7 @@ export default function Tasks() {
             <div>Tarefas</div>
             <AddIcon sx={{fontSize: '40px'}}></AddIcon>
           </Header>
-          <DemoItem>
+          <DemoItem onClick={() => navigate("/task")}>
             <Box sx={{flex: 1, padding: 1, textAlign: 'center'}}>
                 <AssignmentIcon sx={{fontSize: '50px'}}/>
             </Box>
