@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TextField, Box } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 
-function ChatInput({ onSendMessage }) {
+function ChatInput({ disabled, onSendMessage }) {
   const [message, setMessage] = useState('');
 
   const handleSendMessage = () => {
@@ -15,6 +15,7 @@ function ChatInput({ onSendMessage }) {
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', padding: '16px 0 16px 0'}}>
         <TextField
+          disabled={disabled}
             variant="outlined"
             fullWidth
             value={message}
@@ -27,7 +28,7 @@ function ChatInput({ onSendMessage }) {
                 bgcolor: 'white'
             }}
         />
-        <SendIcon sx={{color: 'white'}} onClick={handleSendMessage} />
+        <SendIcon disabled={disabled} sx={{color: 'white'}} onClick={handleSendMessage} />
     </Box>
   );
 }

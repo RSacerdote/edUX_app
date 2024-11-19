@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Paper, Typography } from '@mui/material';
+import { Box, Paper } from '@mui/material';
+import MarkdownTypography from './MarkdownTypography';
 
 function MessageBubble({ message, isUserMessage }) {
   return (
@@ -18,12 +19,12 @@ function MessageBubble({ message, isUserMessage }) {
           backgroundColor: isUserMessage ? '#afd9ec' : '#D3D3D3',
         }}
       >
-        <Typography variant="body1" sx={{
+        <MarkdownTypography variant="body1" sx={{
           wordBreak: 'break-word',
           whiteSpace: 'normal'
         }}>
           {message}
-        </Typography>
+        </MarkdownTypography>
       </Paper>
     </Box>
   );

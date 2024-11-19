@@ -6,18 +6,35 @@ import { Box } from '@mui/material';
 import ChatInput from "../components/ChatInput";
 import MessageBubble from "../components/MessageBubble";
 import { useNavigate } from "react-router-dom";
+import axios from "axios"
 
 export default function Chat() {
 
     const messagesEndRef = useRef(null);
 
     const [messages, setMessages] = useState([]);
+    const [loading, setLoading] = useState(false)
 
     const handleSendMessage = (message) => {
         setMessages((prevMessages) => [
         ...prevMessages,
         { text: message, isUserMessage: true },
         ]);
+        const newMessages = [
+            ...messages,
+            { text: message, isUserMessage: true }
+        ]
+        setLoading(true)
+        console.log(messages)
+        axios.post(`${import.meta.env.VITE_API_URL}/api/message`, newMessages)
+          .then((response)=> {
+            setMessages(response.data)
+            setLoading(false)
+          })
+          .catch((error)=>{
+            console.log(error)
+            setLoading(false)
+        });
     };
 
     useEffect(() => {
@@ -57,7 +74,7 @@ export default function Chat() {
                 ))}
                 <div ref={messagesEndRef} />
             </Box>
-            <ChatInput onSendMessage={handleSendMessage} />
+            <ChatInput disabled={loading} onSendMessage={handleSendMessage} />
         </PlannerContainer>
     )
 }
