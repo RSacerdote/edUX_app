@@ -93,7 +93,7 @@ export default function Home() {
                 <Typography variant="body2" color="textSecondary">Ver tarefas a fazer ou concluídas</Typography>
             </Box>
           </DemoItem>
-          <DemoItem>
+          <DemoItem onClick={() => navigate("/chat")}>
             <Box sx={{flex: 1, padding: 1, textAlign: 'center'}}>
                 <AssistantIcon sx={{fontSize: '50px'}}/>
             </Box>

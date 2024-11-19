@@ -17,7 +17,7 @@ export default function Task() {
           <Header>
             <HomeIcon sx={{fontSize: '40px'}} onClick={() => navigate("/")}></HomeIcon>
             <div>Tarefa</div>
-            <AddIcon sx={{fontSize: '40px'}}></AddIcon>
+            <AddIcon sx={{fontSize: '40px', visibility: 'hidden'}}></AddIcon>
           </Header>
           {!done && <Box sx={{overflowY: 'scroll'}}>
             <DemoItem>
@@ -69,7 +69,7 @@ export default function Task() {
             <Box sx={{width: '100%', color: 'white'}}>
                 <Typography textAlign='center'>Tarefa enviada. O resultado do teste é 2/3.</Typography>
             </Box>
-            <DemoItem>
+            <DemoItem onClick={() => navigate("/chat")}>
             <Box sx={{flex: 1, padding: 1, textAlign: 'center'}}>
                 <AssistantIcon sx={{fontSize: '50px'}}/>
             </Box>

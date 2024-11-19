@@ -16,7 +16,7 @@ export default function Tasks() {
           <Header>
             <HomeIcon sx={{fontSize: '40px'}} onClick={() => navigate("/")}></HomeIcon>
             <div>Tarefas</div>
-            <AddIcon sx={{fontSize: '40px'}}></AddIcon>
+            <AddIcon sx={{fontSize: '40px', visibility: 'hidden'}}></AddIcon>
           </Header>
           <DemoItem onClick={() => navigate("/task")}>
             <Box sx={{flex: 1, padding: 1, textAlign: 'center'}}>
@@ -30,7 +30,7 @@ export default function Tasks() {
                 <Typography align="right" fontWeight="bold" fontSize={15} variant="h6">Prazo: 12/03</Typography>
             </Box>
           </DemoItem>
-          <DemoItem>
+          <DemoItem onClick={() => navigate("/task")}>
             <Box sx={{flex: 1, padding: 1, textAlign: 'center'}}>
                 <AssignmentIcon sx={{fontSize: '50px'}}/>
             </Box>
@@ -42,7 +42,7 @@ export default function Tasks() {
                 <Typography align="right" fontWeight="bold" fontSize={15} variant="h6">Prazo: 10/04</Typography>
             </Box>
           </DemoItem>
-          <DemoItem>
+          <DemoItem onClick={() => navigate("/task")}>
             <Box sx={{flex: 1, padding: 1, textAlign: 'center'}}>
                 <AssignmentIcon sx={{fontSize: '50px'}}/>
             </Box>

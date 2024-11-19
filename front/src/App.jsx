@@ -4,6 +4,8 @@ import Planner from "./pages/Planner"
 import Home from "./pages/Home"
 import Tasks from "./pages/Tasks"
 import Task from "./pages/Task"
+import Chat from "./pages/Chat"
+
 
 export default function App() {
   return (
@@ -14,6 +16,7 @@ export default function App() {
             <Route exact path="/planner" element={<Planner />} />
             <Route exact path="/tasks" element={<Tasks />} />
             <Route exact path="/task" element={<Task />} />
+            <Route exact path="/chat" element={<Chat />} />
           </Routes>
         </BrowserRouter>
       </PagesContainer>
