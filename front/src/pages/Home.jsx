@@ -84,7 +84,7 @@ export default function Home() {
                   <Button onClick={() => setShowToggle(!showToggle)}>{showToggle ? 'Mostrar menos' : 'Mostrar mais'}</Button>
               </ListItem>
           </List>
-          <DemoItem>
+          <DemoItem onClick={() => navigate("/tasks")}>
             <Box sx={{flex: 1, padding: 1, textAlign: 'center'}}>
                 <AssignmentIcon sx={{fontSize: '50px'}}/>
             </Box>

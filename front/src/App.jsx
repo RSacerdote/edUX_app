@@ -2,14 +2,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import styled from "styled-components"
 import Planner from "./pages/Planner"
 import Home from "./pages/Home"
+import Tasks from "./pages/Tasks"
 
 export default function App() {
   return (
     <PagesContainer>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/planner" element={<Planner />} />
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/planner" element={<Planner />} />
+            <Route exact path="/tasks" element={<Tasks />} />
           </Routes>
         </BrowserRouter>
       </PagesContainer>
